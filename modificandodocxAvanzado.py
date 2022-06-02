@@ -6,7 +6,17 @@ from docx.oxml.xmlchemy import OxmlElement
 import os
 import re
 
+
 def buscar_add_parrafo(doc, textSearchParaffo,text_parrafo):
+    """
+        Permite buscar un parrafo de un documento word y agregar debajo un parrafo nuevo
+
+        :doc: documento
+        :textSearchParaffo: parrafo a buscar
+        :text_parrafo: parrafo que se agrega debajo del parrafo buscado
+        
+        """
+    
     style = doc.styles['Normal']
     font = style.font
     font.size = Pt(10)
@@ -26,6 +36,15 @@ def buscar_add_parrafo(doc, textSearchParaffo,text_parrafo):
     return new_para
 
 def buscar_add_parrafo3(doc,parrafo, text_parrafo):
+     """
+        Permite buscar un parrafo de un documento word y agregar debajo un parrafo nuevo
+
+        :doc: documento
+        :parrafo: parrafo a buscar
+        :text_parrafo: parrafo que se agrega debajo del parrafo buscado
+        
+        """
+    
     text_parrafo=text_parrafo.decode('utf-8')
     style = doc.styles['Normal']
     font = style.font
@@ -42,6 +61,15 @@ def buscar_add_parrafo3(doc,parrafo, text_parrafo):
     return new_para
 
 def buscar_add_parrafo2(doc, textSearchParaffo,text_parrafo):
+    
+     """
+        Permite buscar un parrafo de un documento word y agregar antes un parrafo nuevo
+
+        :doc: documento
+        :textSearchParaffo: parrafo a buscar
+        :text_parrafo: parrafo que se agrega debajo del parrafo buscado
+        
+        """
     style = doc.styles['Normal']
     font = style.font
     font.size = Pt(10)
@@ -55,6 +83,16 @@ def buscar_add_parrafo2(doc, textSearchParaffo,text_parrafo):
     return doc
 
 def replace_parrafo_parcial(doc, textSearchParaffo,textobuscar, text_remplazar):
+    
+      """
+        Permite buscar un parrafo buscar un texto dentro del parrafo y reemplazar por otro
+
+        :doc: documento
+        :textSearchParaffo: parrafo a buscar
+        :textobuscar: texto a buscar
+            :text_remplazar: Texto que reemplaza el parrafo buscado
+        
+        """
     textobuscar=textobuscar.decode('utf-8')
     text_remplazar=text_remplazar.decode('utf-8')
     style = doc.styles['Normal']
