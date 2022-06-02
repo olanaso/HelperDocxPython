@@ -1,5 +1,6 @@
 # HelperPython
-Algunos scripts de apoyo diario con el trabajo de documentos .docx
+
+Algunos scripts de apoyo diario con el trabajo de documentos .docx, de gran ayuda.
 
 # Librerias utilizadas
 
